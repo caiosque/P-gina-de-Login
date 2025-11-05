@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página de Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card" role="main" aria-label="Formulário de login">
+    <h1>Entrar na conta</h1>
+
+    <form action="#" method="post" onsubmit="return false;">
+      <div class="field">
+        <label for="usuario">Usuário</label>
+        <input id="usuario" name="usuario" type="text" autocomplete="username" placeholder="seu usuário ou email">
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <input id="senha" name="senha" type="password" autocomplete="current-password" placeholder="••••••••">
+        <button type="button" class="toggle-senha" onclick="toggleSenha()">Mostrar</button>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary" type="submit">Entrar</button>
+      </div>
+    </form>
+
+    <div class="footer">Esqueceu a senha? <a href="recuperar.html" style="color:inherit; text-decoration:underline;">Recuperar</a></div>
+  </main>
+  <footer>
+  <p>&copy; 2025 Caio Nascimento. Todos os direitos reservados.</p>
+  <nav>
+    <a href="mailto:caio.samuel.c.n@gmail.com">Contato</a> |
+    <a href="sobre.html">Sobre</a>
+  </nav>
+</footer>
+  <script>
+    function toggleSenha() {
+      const senhaInput = document.getElementById('senha');
+      const botao = document.querySelector('.toggle-senha');
+      if (senhaInput.type === 'password') {
+        senhaInput.type = 'text';
+        botao.textContent = 'Ocultar';
+      } else {
+        senhaInput.type = 'password';
+        botao.textContent = 'Mostrar';
+      }
+    }
+  </script>
+  
+</body>
+</html>
