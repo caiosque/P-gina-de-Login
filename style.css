@@ -1,0 +1,138 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(135deg, #0f4c81 0%, #2b7bd3 50%, #6fb1ff 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b2b4a;
+}
+
+.card {
+  width: 340px;
+  max-width: calc(100% - 40px);
+  background: rgba(255,255,255,0.92);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(4,24,48,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 4px;
+  text-align: center;
+  color: #063050;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+label {
+  font-size: 13px;
+  color: #23475f;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 10px 12px;
+  border: 1px solid rgba(3, 43, 72, 0.12);
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  background: rgba(255,255,255,0.6);
+  width: 100%;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: rgba(11, 83, 140, 0.9);
+  box-shadow: 0 4px 12px rgba(11,83,140,0.12);
+}
+
+.toggle-senha {
+  position: absolute;
+  right: 10px;
+  top: 32px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  color: #1a6fb3;
+  padding: 2px 4px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+button {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg,#1a6fb3, #2b9fff);
+  color: white;
+  box-shadow: 0 6px 18px rgba(33,115,200,0.22);
+}
+
+.footer {
+  font-size: 12px;
+  color: #274a60;
+  text-align: center;
+  margin-top: 6px;
+}
+
+@media (max-width: 420px) {
+  .card { padding: 20px; }
+  h1 { font-size: 18px; }
+}
+footer {
+  margin-top: 40px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #f0f4f8;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 13px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #eaf2fa;
+}
+
+footer nav a {
+  color: #d9ebff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+footer nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

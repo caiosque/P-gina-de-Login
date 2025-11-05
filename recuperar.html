@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recuperar Senha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card" role="main" aria-label="Formulário de recuperação de senha">
+    <h1>Recuperar Senha</h1>
+
+    <p>Informe o e-mail associado à sua conta. Enviaremos instruções para redefinir sua senha.</p>
+
+    <form onsubmit="return false;">
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="exemplo@dominio.com" required>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary" type="submit" onclick="enviarEmail()">Enviar Instruções</button>
+      </div>
+    </form>
+
+    <p id="mensagem" style="text-align:center; font-size:13px; color:#1a6fb3; margin-top:10px;"></p>
+
+    <div class="actions" style="text-align:center; margin-top:20px;">
+      <a href="login.html" class="btn-primary" style="display:inline-block; text-decoration:none;">Voltar ao Login</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Caio Nascimento. Todos os direitos reservados.</p>
+    <nav>
+      <a href="sobre.html">Sobre Mim</a> |
+      <a href="mailto:caio.samuel.c.n@gmail.com">Contato</a>
+    </nav>
+  </footer>
+
+  <script>
+    function enviarEmail() {
+      const email = document.getElementById('email').value;
+      const msg = document.getElementById('mensagem');
+      if (email.trim() === "") {
+        msg.textContent = "Por favor, preencha seu e-mail.";
+      } else {
+        msg.textContent = "Se o e-mail estiver cadastrado, enviaremos as instruções de recuperação.";
+      }
+    }
+  </script>
+</body>
+</html>
